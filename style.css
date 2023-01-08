@@ -161,7 +161,7 @@ canvas {
 
 @media (max-width: 600px) {
     canvas {
-        margin: 5% 12%;
+        margin: 0 10%;
     }
     .game__over__menu {
         height: 200px;
@@ -178,5 +178,6 @@ canvas {
     }
     .jump__controls button {
         width: 50%;
+        padding: 0px 20px;
     }
 }
