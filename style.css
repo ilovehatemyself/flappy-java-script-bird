@@ -161,7 +161,7 @@ canvas {
 
 @media (max-width: 600px) {
     canvas {
-        margin: 5% 14%;
+        margin: 5% 12%;
     }
     .game__over__menu {
         height: 200px;
