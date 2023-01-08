@@ -1,6 +1,7 @@
 * {
     overflow-y: hidden;
     font-family: monospace;
+    user-select: none;
 }
 :root {
     --s-body-background: #000;
