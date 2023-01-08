@@ -22,6 +22,16 @@
     --s-game-over-controls-border: 1px solid #000000;
     --s-game-over-controls-color-button-hover: #8d8d8d;
     --s-game-over-controls-background-color-button-hover: #0a0a0a;
+    --s-jump-controls-color-button:#fff;
+    --s-jump-controls-border-button: 1px solid #181818;
+    --s-jump-controls-background-color-button: #000;
+    --s-jump-controls-color-button-hover:#3d3d3d;
+    --s-jump-controls-border-button-hover: 1px solid #181818;
+    --s-jump-controls-background-color-button-hover: #000;
+    --s-jump-controls-color-button-active:#1f1f1f;
+    --s-jump-controls-border-button-active: 1px solid #181818;
+    --s-jump-controls-background-color-button-active: #000;
+    
 }
 body {
     background: var(--s-body-background);
@@ -34,8 +44,9 @@ canvas {
     margin: 2em 35%;
     z-index: 1;
 }
+
 .main__menu {
-    z-index: 3;
+    z-index: 4;
     text-align: center;
     position: fixed;
     left: 0;
@@ -93,7 +104,7 @@ canvas {
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 2;
+    z-index: 3;
 }
 .game__over__controls {
     text-align: center;
@@ -117,8 +128,55 @@ canvas {
     cursor: pointer;
 }
 
+.jump__controls {
+    text-align: center;
+    position: fixed;
+    bottom: 100px;
+    right: 42px;
+    left: 0;
+    z-index: 2;
+}
+.jump__controls button {
+    width: 25%;
+    font-size: 20px;
+    color: var(--s-jump-controls-color-button);
+    border: var(--s-jump-controls-border-button);
+    background-color: var(--s-jump-controls-background-color-button);
+}
+.jump__controls button:hover {
+    color: var(--s-jump-controls-color-button-hover);
+    border: var(--s-jump-controls-border-button-hover);
+    background-color: var(--s-jump-controls-background-color-button-hover);
+}
+.jump__controls button:active {
+    color: var(--s-jump-controls-color-button-active);
+    border: var(--s-jump-controls-border-button-active);
+    background-color: var(--s-jump-controls-background-color-button-active);
+}
 /* Animations */
 @keyframes modalShow {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    canvas {
+        margin: 5% 14%;
+    }
+    .game__over__menu {
+        height: 200px;
+    }
+    .game__over__controls {
+        text-align: left;
+    }
+    .game__over__controls button {
+        width: 30%;
+    }
+    .jump__controls {
+        bottom: 50px;
+        right: 42px;
+    }
+    .jump__controls button {
+        width: 50%;
+    }
 }
