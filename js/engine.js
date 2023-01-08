@@ -104,6 +104,12 @@ ctx.fillText("Score: " + score, 10, cvs.height - 600);
 requestAnimationFrame(draw); // функция позволяет пропускать кадры
 }
 
+function jumpControls () {
+   document.querySelector('#jumpControls').innerHTML += `
+   <button onclick="moveUp()">Jump</button>
+   `
+}
+
 function stopAllSteps () { // функция останавливающая все процессы для корректной работы меню
    gameOver.play();
    mainMenuSound.src = '';
@@ -150,7 +156,8 @@ mainMenu();
 
 function hideMainMenu () { // при нажатии на кнопку меню будет скрываться и вызвать нужные процессы
    mainMenu = document.querySelector('.main__menu');
-   pipeBottom.onload = draw(); 
+   pipeBottom.onload = draw();
+   jumpControls(); 
    fly.src = "audio/fly.mp3";
    clickButtons.play();
    mainMenuSound.play();
