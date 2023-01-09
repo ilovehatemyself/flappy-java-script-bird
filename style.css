@@ -1,0 +1,124 @@
+* {
+    overflow-y: hidden;
+    font-family: monospace;
+}
+:root {
+    --s-body-background: #000;
+    --s-main-menu: #000;
+    --s-main-menu-color-h1: #fff;
+    --s-main-menu-color-button: #fff;
+    --s-main-menu-controls-background-color-button: #0f0f0f;
+    --s-main-menu-controls-border-button: 1px solid #000000;
+    --s-main-menu-controls-color-hover: #8d8d8d;
+    --s-main-menu-controls-background-color-hover: #141414;
+    --s-main-menu-controls-color-a: #ffffff;
+    --s-main-menu-controls-color-a-hover: #757575;
+    --s-game-menu-border: 3px solid #000;
+    --s-backdrop-background-color: #000;
+    --s-game-over-color: #fff;
+    --s-game-over-controls-color: #fff;
+    --s-game-over-controls-color-button: #fff;
+    --s-game-over-controls-background-color-button: #0f0f0f;
+    --s-game-over-controls-border: 1px solid #000000;
+    --s-game-over-controls-color-button-hover: #8d8d8d;
+    --s-game-over-controls-background-color-button-hover: #0a0a0a;
+}
+body {
+    background: var(--s-body-background);
+
+}
+canvas {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: 2em 35%;
+    z-index: 1;
+}
+.main__menu {
+    z-index: 3;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-top: 100px;
+    background-color: var(--s-main-menu);
+}
+.main__menu__controls {
+    animation: modalShow 1s backwards;
+}
+.main__menu__controls h1 {
+    color: var(--s-main-menu-color-h1);
+}
+.main__menu__controls button {
+    margin: 0px auto;
+    width: 25%;
+    font-size: 40px;
+    color: var(--s-main-menu-color-button);
+    background-color: var(--s-main-menu-controls-background-color-button);
+    border: var(--s-main-menu-controls-border-button);
+    transition-duration: 0.1s;
+}
+.main__menu__controls button:hover {
+    color: var(--s-main-menu-controls-color-hover);
+    background-color: var(--s-main-menu-controls-background-color-hover);
+    cursor: pointer;
+}
+.main__menu li {
+    padding-right: 10em;
+}
+.main__menu__controls a {
+    font-size: 20px;
+    color: var(--s-main-menu-controls-color-a);
+    text-decoration: none;
+}
+.main__menu__controls a:hover {
+    color: var(--s-main-menu-controls-color-a-hover);
+}
+.game__over__menu {
+    width: 1200px;
+    height: 200px;
+    border: var(--s-game-menu-border);
+    position: fixed;
+    transform: translate(5%,100%);
+    z-index: 2;
+    animation: modalShow 1s backwards;
+}
+.backdrop {
+    position: fixed;
+    background: var(--s-backdrop-background-color);
+    opacity: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+}
+.game__over__controls {
+    text-align: center;
+}
+.game__over__controls p {
+    color: var(--s-game-over-color);
+    font-size: 25px;
+    font-family: monospace;
+}
+.game__over__controls button {
+    color: var(--s-game-over-controls-color-button);
+    width: 50%;
+    font-size: 40px;
+    background-color: var(--s-game-over-controls-background-color-button);
+    border: var(--s-game-over-controls-border);
+    transition-duration: 0.1s;
+}
+.game__over__controls button:hover {
+    color: var(--s-game-over-controls-color-button-hover);
+    background-color: var(--s-game-over-controls-background-color-button-hover);
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes modalShow {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
