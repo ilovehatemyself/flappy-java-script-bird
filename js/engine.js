@@ -145,7 +145,7 @@ function mainMenu () { // главное меню *вомзожно в скор�
    <button onclick="hideMainMenu()">Start</button>
    <ul type="none">
       <li>
-         <a href="https://github.com/ilovehatemyself" onclick="alert('You will be have redirect on https://github.com/ilovehatemyself ???')" target="_blank">Thanks  ilovehatemyself</a>
+         <a href="https://github.com/zemcow" onclick="alert('You will be have redirect on https://github.com/zemcow ???')" target="_blank">Thanks zemcow</a>
       </li>
    </ul>
    </div>
